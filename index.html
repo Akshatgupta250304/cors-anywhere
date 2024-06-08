@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Prediction Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Stock Prediction Website</h1>
+        <div class="search-bar">
+            <input type="text" id="stock-symbol" placeholder="Enter stock symbol">
+            <button onclick="fetchNews()">Search</button>
+        </div>
+    </header>
+    <section class="news-section">
+        <h2>News</h2>
+        <div id="news-container"></div>
+    </section>
+    <section class="dashboard">
+        <h2>Today's Highs and Lows</h2>
+        <button onclick="fetchHighsLows()">Refresh</button>
+        <div class="market-data">
+            <div class="market" id="nse">
+                <h3>NSE</h3>
+                <p>High: <span id="nse-high">-</span></p>
+                <p>Low: <span id="nse-low">-</span></p>
+            </div>
+            <div class="market" id="bse">
+                <h3>BSE</h3>
+                <p>High: <span id="bse-high">-</span></p>
+                <p>Low: <span id="bse-low">-</span></p>
+            </div>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
